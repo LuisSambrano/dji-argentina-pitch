@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local screenshots from Playwright verification
+.tmp-screenshots/
+
+# Vercel
+.vercel

@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Argentina, frame a frame — Propuesta DJI
 
-## Getting Started
+Landing page de pitch para una colaboración de contenido nómada con DJI:
+storytelling + travel lifestyle + cinematografía aérea recorriendo Argentina con
+**DJI Mini 5 Pro · Osmo Pocket 4 · Osmo 360**.
 
-First, run the development server:
+Site live: https://dji-argentina-pitch.vercel.app
+
+## Stack
+
+- **Next.js 16** (App Router, RSC, Turbopack)
+- **TypeScript** estricto
+- **Tailwind CSS v4** con sistema de diseño Apple en `app/globals.css` via `@theme`
+- **Inter** (variable, vía `next/font/google`) con fallback a SF Pro real en Apple devices
+- Animaciones CSS + IntersectionObserver propio (sin Framer Motion)
+- Deploy: **Vercel Hobby** (gratis) conectado a este repo
+
+## Setup local
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build de producción:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Estructura
 
-## Learn More
+```
+app/
+  layout.tsx           # Inter font, metadata global, html lang="es-AR"
+  page.tsx             # Composición de tiles
+  globals.css          # @theme con tokens Apple (colors, typography, radii, shadows)
+  opengraph-image.tsx  # OG image dinámica (Edge Runtime)
+  robots.ts, sitemap.ts, icon.svg
+components/
+  nav/{global-nav,sub-nav}.tsx
+  ui/{tile,button-primary,button-ghost,reveal,product-icon}.tsx
+  tiles/{hero,concept,ecosystem,route,method,community,advantage,cta}.tsx
+  footer.tsx
+lib/
+  content.ts           # TODA la copy en español rioplatense
+  clsx.ts
+public/
+  images/              # 5 fotos placeholder + README de swap
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Cómo iterar
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Cambio | Dónde |
+|---|---|
+| Texto / titulares / copy | `lib/content.ts` |
+| Email, Instagram, links de contacto | `lib/content.ts` → `contact` |
+| Imágenes de paisaje | `public/images/*.jpg` (mantené el nombre) |
+| Productos DJI (SVG) | `components/ui/product-icon.tsx` |
+| Colores / tipografía | `app/globals.css` `@theme` |
+| Orden / nuevas secciones | `app/page.tsx` |
+| Metadata, OG, SEO | `app/layout.tsx` |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy a Vercel (gratis)
 
-## Deploy on Vercel
+Opción rápida con Vercel CLI:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm i -g vercel
+vercel login
+vercel --prod
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Opción visual: importá el repo en https://vercel.com/new — Vercel detecta Next.js
+y deploya automáticamente. El Hobby tier soporta este proyecto sin costo (100 GB
+bandwidth/mes, builds ilimitados).
+
+## Sistema de diseño
+
+Resumen del sistema Apple aplicado (ver `app/globals.css` para detalle):
+
+- **Acento único**: `#0066cc` para todo lo interactivo. En tiles dark, los links usan `#2997ff`.
+- **Tipografía**: Inter 17px body (no 16px), display weight 600 con tracking tight (-0.02em).
+- **Tiles full-bleed**: cero bordes redondeados; el cambio de color es el divisor.
+- **Una sola sombra**: `3px 5px 30px rgba(0,0,0,0.22)` reservada para imágenes de producto.
+- **Cero gradientes decorativos**: la atmósfera viene de la fotografía, no del CSS.
+- **Press state universal**: `active:scale-95` en todos los botones.
+
+## Licencia de contenido
+
+- Código: MIT (uso libre).
+- Copy: propiedad de Luis Sambrano (uso restringido al contexto de esta propuesta).
+- Imágenes placeholder: Unsplash + Pexels (CC0, atribución no requerida).
+- Productos DJI: marca registrada de SZ DJI Technology Co., Ltd. — uso bajo
+  fair use para propuesta editorial/colaboración.
