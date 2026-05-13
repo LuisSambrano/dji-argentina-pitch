@@ -82,22 +82,17 @@ export const content = {
         {
           title: "Hambre y disponibilidad",
           body:
-            "Estoy disponible los próximos doce meses sin agenda paralela. Cuando DJI pida un evento, una activación o una entrega rápida, llego con tiempo y con cámara lista. Esa flexibilidad no la tiene un creador con cien clientes encima.",
+            "Estoy disponible los próximos doce meses sin agenda paralela. Cuando haga falta un evento, una activación o una entrega rápida, hay tiempo y cámara lista. Esa disponibilidad es difícil de garantizar para un creador con muchos clientes encima.",
         },
         {
-          title: "Voz en formación, no impuesta",
+          title: "Voz en formación",
           body:
-            "Mi estética aún se está definiendo. Eso significa que puede absorber el código visual de DJI, lo cinematográfico y lo accesible, sin pelear con un branding personal cristalizado. Crezco en la dirección que la colaboración necesita.",
+            "Mi estética todavía se está definiendo. Eso me deja conversar con el estilo de DJI, lo cinematográfico y lo accesible, sin pelear con una identidad personal ya cristalizada. Hay espacio para construir una voz que sume al lenguaje de la marca.",
         },
         {
-          title: "Compromiso de exclusividad",
+          title: "Exclusividad simple",
           body:
-            "Por la duración de este proyecto, no acepto colaboraciones con marcas competidoras de drones, gimbales ni cámaras 360. Todo lo que publique en doce meses muestra a DJI o a la propuesta directamente. Una sola lealtad, fácil de auditar.",
-        },
-        {
-          title: "Documentación abierta",
-          body:
-            "Cada decisión creativa, cada plano, cada provincia visitada y cada métrica de publicación quedan documentadas en un dashboard compartido con el equipo de DJI. Reportes mensuales con piezas entregadas, alcance acumulado, costo por entrega y siguientes pasos. Una colaboración medible, no un acto de fe.",
+            "Por la duración del proyecto no tomo colaboraciones con marcas competidoras de drones, gimbales o cámaras 360. Es un compromiso simple que limpia conflictos antes de que aparezcan.",
         },
       ],
     },
@@ -136,13 +131,13 @@ export const content = {
       eyebrow: "Cómo lo voy a hacer",
       headline: "Del lente a la pantalla,\ncuatro etapas claras.",
       lead:
-        "Las propuestas suelen quedarse en el qué. Esta página existe para mostrar el cómo. Para que sepas exactamente qué pasa entre el momento en que aterrizo en una provincia y el momento en que la pieza está publicada con métricas medibles.",
+        "Las propuestas suelen quedarse en el qué. Esta página existe para mostrar el cómo. Para que sepas exactamente qué pasa entre el momento en que aterrizo en una provincia y el momento en que la pieza está publicada.",
       steps: [
         {
           number: "01",
           title: "Pre-producción remota",
           body:
-            "Antes de pisar la provincia, ya tengo el mapa de locaciones, los contactos locales que aporta la comunidad emergente, la estructura narrativa del episodio y la lista de planos clave. Llego con un guión vivo, no con una cámara apuntando al azar.",
+            "Antes de pisar la provincia ya tengo el mapa de locaciones, los contactos locales (anfitriones, guías, refugios), la estructura narrativa del episodio y la lista de planos clave. Llego con un guión vivo, no con una cámara apuntando al azar.",
         },
         {
           number: "02",
@@ -160,7 +155,7 @@ export const content = {
           number: "04",
           title: "Publicación coordinada",
           body:
-            "Cada entrega sale simultáneamente en Instagram Reels, YouTube Shorts y YouTube principal en formato horizontal, con copy localizado y subtítulos en inglés desde el día uno. Las métricas de cada pieza llegan al dashboard del equipo de DJI dentro de las setenta y dos horas siguientes.",
+            "Cada entrega sale simultáneamente en Instagram Reels, YouTube Shorts y YouTube principal en formato horizontal. Copy localizado para cada plataforma y subtítulos en inglés desde el día uno, para que el contenido funcione tanto en el feed latino como en una campaña global de la marca.",
         },
       ],
     },
@@ -297,7 +292,7 @@ export const content = {
         {
           title: "Amplificación global",
           body:
-            "Cada pieza del proyecto está pensada también para audiencias internacionales. Subtítulos en inglés desde el día uno, material crudo disponible para los equipos de marketing globales, y cero costo extra para que la marca use cualquier pieza dentro de sus campañas internacionales.",
+            "Cada pieza del proyecto está pensada también para audiencias internacionales. Subtítulos en inglés desde el día uno y libertad para que la marca reutilice cualquier pieza terminada dentro de sus campañas globales, sin costo adicional ni renegociación de derechos.",
         },
       ],
       quote:
@@ -306,12 +301,12 @@ export const content = {
 
     community: {
       eyebrow: "Lo que sumo más allá de mi cuenta",
-      headline: "Una red de creadores\nemergentes locales.",
+      headline: "Donde tiene sentido,\nsumo creadores locales.",
       lead:
-        "El proyecto no termina en mí. Cada provincia activa una colaboración con un creador local emergente que también trabaja con el ecosistema DJI. Una pieza compartida abre dos audiencias y, al cabo del año, DJI tiene una red regional construida orgánicamente sin contrato pero con vínculo real.",
+        "Donde se da naturalmente, cada provincia suma una colaboración con un creador local emergente que también trabaja con el ecosistema DJI. Una pieza compartida abre dos audiencias y va dejando una pequeña red regional construida orgánicamente. Es un bonus del proyecto, no un compromiso fijo.",
       metrics: [
         { value: "24", label: "Provincias en doce meses" },
-        { value: "12+", label: "Creadores locales sumados" },
+        { value: "12", label: "Mini documentales mensuales" },
         { value: "52", label: "Piezas en doce meses, una por semana" },
         { value: "3", label: "Documentales largos al cierre" },
       ],
@@ -457,22 +452,17 @@ export const content = {
         {
           title: "Hunger and availability",
           body:
-            "I am available for the next twelve months with no parallel agenda. When DJI requests an event, an activation or a quick turnaround, I show up with time and gear ready. A creator with one hundred other clients can not match that flexibility.",
+            "I am available for the next twelve months with no parallel agenda. When an event, an activation or a quick turnaround comes up, there is time and gear ready. That kind of availability is hard to guarantee for a creator with many other clients.",
         },
         {
-          title: "Voice still forming, not imposed",
+          title: "Voice still forming",
           body:
-            "My aesthetic is still being defined. That means it can absorb DJI's visual code, the cinematic and the accessible, without fighting against a fully crystallized personal brand. I grow in the direction this collaboration needs.",
+            "My aesthetic is still being defined. That lets me converse with DJI's visual language, the cinematic and the accessible, without fighting against a personal brand that is already crystallized. There is room to build a voice that adds to the brand's vocabulary.",
         },
         {
-          title: "Exclusivity commitment",
+          title: "Simple exclusivity",
           body:
-            "For the duration of this project, I will not take collaborations with competing brands in drones, gimbals or 360 cameras. Everything I publish in twelve months features DJI or this proposal directly. One single loyalty, easy to audit.",
-        },
-        {
-          title: "Open documentation",
-          body:
-            "Every creative decision, every shot, every province visited and every publishing metric lives in a shared dashboard with DJI's team. Monthly reports with delivered pieces, accumulated reach, cost per delivery and next steps. A measurable collaboration, not an act of faith.",
+            "For the duration of the project, I will not take collaborations with competing brands in drones, gimbals or 360 cameras. It is a simple commitment that clears conflicts before they appear.",
         },
       ],
     },
@@ -511,13 +501,13 @@ export const content = {
       eyebrow: "How I will do it",
       headline: "From lens to screen,\nfour clear stages.",
       lead:
-        "Most proposals stop at the what. This page exists to show the how. So that you know exactly what happens between the moment I land in a province and the moment the piece is published with measurable metrics.",
+        "Most proposals stop at the what. This page exists to show the how. So that you know exactly what happens between the moment I land in a province and the moment the piece is published.",
       steps: [
         {
           number: "01",
           title: "Remote pre production",
           body:
-            "Before setting foot in a province, I already have the location map, the local contacts brought in by the emerging community network, the narrative structure of the episode and the key shot list. I arrive with a living script, not a camera pointing at random.",
+            "Before setting foot in a province I already have the location map, the local contacts (hosts, guides, refuges), the narrative structure of the episode and the key shot list. I arrive with a living script, not a camera pointing at random.",
         },
         {
           number: "02",
@@ -535,7 +525,7 @@ export const content = {
           number: "04",
           title: "Coordinated publishing",
           body:
-            "Every release goes out simultaneously on Instagram Reels, YouTube Shorts and main YouTube in horizontal format, with localized copy and English subtitles from day one. Each piece's metrics reach the DJI team dashboard within seventy two hours of going live.",
+            "Every release goes out simultaneously on Instagram Reels, YouTube Shorts and main YouTube in horizontal format. Localized copy for each platform and English subtitles from day one, so the content works both in the Latin feed and in a global brand campaign.",
         },
       ],
     },
@@ -670,7 +660,7 @@ export const content = {
         {
           title: "Global amplification",
           body:
-            "Every piece is conceived with international audiences in mind. English subtitles from day one, raw material available to global marketing teams, and zero extra cost for the brand to use any piece in international campaigns.",
+            "Every piece is conceived with international audiences in mind. English subtitles from day one and full freedom for the brand to reuse any finished piece in its global campaigns, with no extra cost and no rights renegotiation.",
         },
       ],
       quote:
@@ -679,12 +669,12 @@ export const content = {
 
     community: {
       eyebrow: "What I add beyond my own channel",
-      headline: "A network of emerging\nlocal creators.",
+      headline: "Where it makes sense,\nI bring in local creators.",
       lead:
-        "The project does not end with me. Every province activates a collaboration with a local emerging creator who also works with the DJI ecosystem. One shared piece opens two audiences and, by year end, DJI has an organically built regional network of allies, no contracts but real bonds.",
+        "Where it happens naturally, each province adds a collaboration with a local emerging creator who also works with the DJI ecosystem. One shared piece opens two audiences and slowly leaves a small regional network built organically. It is a bonus from the project, not a fixed commitment.",
       metrics: [
         { value: "24", label: "Provinces in twelve months" },
-        { value: "12+", label: "Local creators onboarded" },
+        { value: "12", label: "Monthly mini documentaries" },
         { value: "52", label: "Pieces in twelve months, one per week" },
         { value: "3", label: "Long documentaries by year end" },
       ],
