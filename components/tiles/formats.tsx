@@ -11,7 +11,7 @@ import { useLocale } from "@/lib/locale";
 export function Formats() {
   const { locale } = useLocale();
   const t = content[locale].formats;
-  const { instagram, youtubeShorts, youtube } = t.mock;
+  const shared = t.mock;
 
   return (
     <Tile variant="canvas" id="formatos">
@@ -47,45 +47,40 @@ export function Formats() {
               }
             >
               {/* Device frame */}
-              <div
-                className={
-                  q.device === "macbook"
-                    ? "order-1 w-full lg:order-1"
-                    : "order-1 w-full lg:order-1"
-                }
-              >
+              <div className="w-full">
                 {q.device === "instagram-reel" ? (
                   <InstagramFrame
                     videoSrc={q.video}
                     posterSrc={q.poster}
-                    handle={instagram.handle}
-                    location={instagram.location}
-                    caption={instagram.caption}
-                    followLabel={instagram.followLabel}
+                    handle={shared.instagramHandle}
+                    location={q.mock.location}
+                    caption={q.mock.caption}
+                    followLabel={shared.instagramFollowLabel}
                   />
                 ) : q.device === "youtube-shorts" ? (
                   <YouTubeShortsFrame
                     videoSrc={q.video}
                     posterSrc={q.poster}
-                    channel={youtubeShorts.channel}
-                    subscribers={youtubeShorts.subscribers}
-                    title={youtubeShorts.title}
+                    channel={shared.youtubeShortsChannel}
+                    subscribers={shared.youtubeShortsSubscribers}
+                    title={q.mock.title}
                   />
                 ) : (
                   <MacBookFrame
                     videoSrc={q.video}
                     posterSrc={q.poster}
-                    channel={youtube.channel}
-                    views={youtube.views}
-                    time={youtube.time}
-                    title={youtube.title}
-                    shortTitle={youtube.shortTitle}
+                    channel={shared.youtubeChannel}
+                    subscribers={shared.youtubeSubscribers}
+                    views={q.mock.views}
+                    time={q.mock.time}
+                    title={q.mock.title}
+                    shortTitle={q.mock.shortTitle}
                   />
                 )}
               </div>
 
               {/* Text */}
-              <div className="order-2 max-w-[480px] lg:order-2">
+              <div className="max-w-[480px]">
                 <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-primary">
                   {q.tag}
                 </p>

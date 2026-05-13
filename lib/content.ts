@@ -212,6 +212,11 @@ export const content = {
           video: "/videos/format-vertical-short.mp4",
           poster: "/images/route-ciudad.jpg",
           device: "instagram-reel" as const,
+          mock: {
+            location: "Buenos Aires, Argentina",
+            caption:
+              "La 9 de Julio a las seis de la mañana, antes de que aparezca el primer colectivo. Es la única hora en que esta avenida se ve corta.",
+          },
         },
         {
           title: "Short para YouTube",
@@ -221,6 +226,9 @@ export const content = {
           video: "/videos/format-vertical-long.mp4",
           poster: "/images/route-refugio.jpg",
           device: "youtube-shorts" as const,
+          mock: {
+            title: "Cómo conseguí cabaña sin reserva en plena temporada alta",
+          },
         },
         {
           title: "Clip cinemático horizontal",
@@ -230,6 +238,13 @@ export const content = {
           video: "/videos/format-horizontal-short.mp4",
           poster: "/images/route-naturaleza.jpg",
           device: "macbook" as const,
+          mock: {
+            title:
+              "Veinte minutos de luz al final de cada día | Cordillera, Argentina",
+            shortTitle: "Veinte minutos de luz al final de cada día",
+            views: "48 mil vistas",
+            time: "hace 4 días",
+          },
         },
         {
           title: "Documental horizontal",
@@ -239,30 +254,22 @@ export const content = {
           video: "/videos/format-horizontal-long.mp4",
           poster: "/images/route-ruta.jpg",
           device: "macbook" as const,
+          mock: {
+            title:
+              "Tres mil kilómetros en una sola provincia | Patagonia, Argentina",
+            shortTitle: "Tres mil kilómetros en una sola provincia",
+            views: "112 mil vistas",
+            time: "hace 2 semanas",
+          },
         },
       ],
       mock: {
-        instagram: {
-          handle: "luissambrano_ux",
-          location: "Patagonia, Argentina",
-          caption:
-            "La hora azul de la Patagonia dura veinte minutos al día. Vale levantarse a las cinco para no perdérsela.",
-          followLabel: "Seguir",
-        },
-        youtubeShorts: {
-          channel: "Luis Sambrano",
-          subscribers: "12,4 mil suscriptores",
-          title: "Manejé ochocientos kilómetros sin parar para ver salir el sol",
-        },
-        youtube: {
-          channel: "Luis Sambrano",
-          views: "248 mil vistas",
-          time: "hace 2 días",
-          title:
-            "El refugio del valle donde ya no entran autos | Cordillera, Argentina",
-          shortTitle:
-            "El refugio del valle donde ya no entran autos",
-        },
+        instagramHandle: "luissambrano_ux",
+        instagramFollowLabel: "Seguir",
+        youtubeShortsChannel: "Luis Sambrano",
+        youtubeShortsSubscribers: "2,4 mil suscriptores",
+        youtubeChannel: "Luis Sambrano",
+        youtubeSubscribers: "8,7 mil suscriptores",
       },
     },
 
@@ -580,6 +587,11 @@ export const content = {
           video: "/videos/format-vertical-short.mp4",
           poster: "/images/route-ciudad.jpg",
           device: "instagram-reel" as const,
+          mock: {
+            location: "Buenos Aires, Argentina",
+            caption:
+              "Avenida 9 de Julio at six in the morning, before the first bus shows up. The only hour the widest avenue in the world looks short.",
+          },
         },
         {
           title: "YouTube Short",
@@ -589,6 +601,9 @@ export const content = {
           video: "/videos/format-vertical-long.mp4",
           poster: "/images/route-refugio.jpg",
           device: "youtube-shorts" as const,
+          mock: {
+            title: "How I found this cabin with no booking in peak season",
+          },
         },
         {
           title: "Horizontal cinematic clip",
@@ -598,6 +613,12 @@ export const content = {
           video: "/videos/format-horizontal-short.mp4",
           poster: "/images/route-naturaleza.jpg",
           device: "macbook" as const,
+          mock: {
+            title: "Twenty minutes of light at the end of every day | Andes, Argentina",
+            shortTitle: "Twenty minutes of light at the end of every day",
+            views: "48K views",
+            time: "4 days ago",
+          },
         },
         {
           title: "Horizontal documentary",
@@ -607,30 +628,21 @@ export const content = {
           video: "/videos/format-horizontal-long.mp4",
           poster: "/images/route-ruta.jpg",
           device: "macbook" as const,
+          mock: {
+            title: "Three thousand kilometers in one single province | Patagonia, Argentina",
+            shortTitle: "Three thousand kilometers in one single province",
+            views: "112K views",
+            time: "2 weeks ago",
+          },
         },
       ],
       mock: {
-        instagram: {
-          handle: "luissambrano_ux",
-          location: "Patagonia, Argentina",
-          caption:
-            "Patagonia's blue hour lasts twenty minutes a day. Worth waking up at five not to miss it.",
-          followLabel: "Follow",
-        },
-        youtubeShorts: {
-          channel: "Luis Sambrano",
-          subscribers: "12.4K subscribers",
-          title: "I drove eight hundred kilometers without stopping to catch this sunrise",
-        },
-        youtube: {
-          channel: "Luis Sambrano",
-          views: "248K views",
-          time: "2 days ago",
-          title:
-            "The refuge in the valley cars no longer reach | Andes, Argentina",
-          shortTitle:
-            "The refuge in the valley cars no longer reach",
-        },
+        instagramHandle: "luissambrano_ux",
+        instagramFollowLabel: "Follow",
+        youtubeShortsChannel: "Luis Sambrano",
+        youtubeShortsSubscribers: "2.4K subscribers",
+        youtubeChannel: "Luis Sambrano",
+        youtubeSubscribers: "8.7K subscribers",
       },
     },
 

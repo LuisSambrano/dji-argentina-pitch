@@ -4,6 +4,7 @@ type Props = {
   videoSrc: string;
   posterSrc: string;
   channel: string;
+  subscribers: string;
   views: string;
   time: string;
   title: string;
@@ -20,6 +21,7 @@ export function MacBookFrame({
   videoSrc,
   posterSrc,
   channel,
+  subscribers,
   views,
   time,
   title,
@@ -110,7 +112,7 @@ export function MacBookFrame({
                 <div className="h-7 w-7 flex-shrink-0 rounded-full bg-gradient-to-br from-[#2997ff] to-[#0066cc]" />
                 <div className="flex flex-col leading-tight">
                   <span className="text-[10px] font-semibold">{channel}</span>
-                  <span className="text-[8px] text-white/60">87 mil suscriptores</span>
+                  <span className="text-[8px] text-white/60">{subscribers}</span>
                 </div>
                 <button
                   type="button"
