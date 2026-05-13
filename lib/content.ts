@@ -300,15 +300,13 @@ export const content = {
     },
 
     community: {
-      eyebrow: "Lo que sumo más allá de mi cuenta",
-      headline: "Donde tiene sentido,\nsumo creadores locales.",
-      lead:
-        "Donde se da naturalmente, cada provincia suma una colaboración con un creador local emergente que también trabaja con el ecosistema DJI. Una pieza compartida abre dos audiencias y va dejando una pequeña red regional construida orgánicamente. Es un bonus del proyecto, no un compromiso fijo.",
+      eyebrow: "El proyecto en números",
+      headline: "Doce meses,\ncuatro cifras claras.",
       metrics: [
-        { value: "24", label: "Provincias en doce meses" },
-        { value: "12", label: "Mini documentales mensuales" },
-        { value: "52", label: "Piezas en doce meses, una por semana" },
-        { value: "3", label: "Documentales largos al cierre" },
+        { value: "24", label: "Provincias recorridas" },
+        { value: "52", label: "Piezas durante el año" },
+        { value: "12", label: "Mini documentales" },
+        { value: "3", label: "Documentales largos" },
       ],
     },
 
@@ -668,15 +666,13 @@ export const content = {
     },
 
     community: {
-      eyebrow: "What I add beyond my own channel",
-      headline: "Where it makes sense,\nI bring in local creators.",
-      lead:
-        "Where it happens naturally, each province adds a collaboration with a local emerging creator who also works with the DJI ecosystem. One shared piece opens two audiences and slowly leaves a small regional network built organically. It is a bonus from the project, not a fixed commitment.",
+      eyebrow: "The project in numbers",
+      headline: "Twelve months,\nfour clear figures.",
       metrics: [
-        { value: "24", label: "Provinces in twelve months" },
-        { value: "12", label: "Monthly mini documentaries" },
-        { value: "52", label: "Pieces in twelve months, one per week" },
-        { value: "3", label: "Long documentaries by year end" },
+        { value: "24", label: "Provinces traveled" },
+        { value: "52", label: "Pieces across the year" },
+        { value: "12", label: "Mini documentaries" },
+        { value: "3", label: "Long documentaries" },
       ],
     },
 
