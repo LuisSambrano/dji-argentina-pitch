@@ -70,14 +70,14 @@ export const content = {
       eyebrow: "La propuesta en una frase",
       headline: "Doce meses recorriendo\nArgentina con tu ecosistema\nen mano.",
       lead:
-        "Una sola colaboración de largo aliento, no una campaña corta. Una pieza por semana durante doce meses, cincuenta y dos en total, repartidas entre feeds verticales y horizontales. Un mini documental mensual al cierre de cada provincia, doce en total. Y tres documentales largos al cierre del año. Todo capturado con DJI Mini 5 Pro, Osmo Pocket 4 y Osmo 360, editado en ruta y publicado bajo una sola voz creativa. Si funciona en Argentina, la estructura está pensada para replicarse en otros países de la región.",
+        "Una sola colaboración de largo aliento, no una campaña corta. Una pieza por semana durante doce meses, cincuenta y dos en total, repartidas entre feeds verticales y horizontales. Un mini documental mensual al cierre de cada provincia, doce en total. Y tres documentales largos al cierre del año. Todo capturado con DJI Mini 5 Pro, Osmo Pocket 4 y Osmo 360, editado en ruta y publicado bajo una sola voz creativa.",
     },
 
     whyCreator: {
       eyebrow: "Por qué este creador",
       headline: "No tengo un millón\nde seguidores, todavía.\nEsa es la oportunidad.",
       lead:
-        "Un creador establecido viene con su audiencia construida, su estética cerrada y agenda llena. Un creador emergente como yo trae lo opuesto, y eso es exactamente lo que esta colaboración necesita: tiempo dedicado, disposición a moldear la voz junto con la marca, compromiso de exclusividad y hambre real de producir. No vas a tener que pelear por mi atención con otras marcas en paralelo.",
+        "Un creador establecido viene con su audiencia construida, su estética cerrada y agenda llena. Un creador emergente como yo trae lo opuesto, y eso es exactamente lo que esta colaboración necesita: tiempo dedicado, disposición a moldear la voz junto con la marca, y hambre real de producir.",
       points: [
         {
           title: "Hambre y disponibilidad",
@@ -137,7 +137,7 @@ export const content = {
           number: "01",
           title: "Pre-producción remota",
           body:
-            "Antes de pisar la provincia ya tengo el mapa de locaciones, los contactos locales (anfitriones, guías, refugios), la estructura narrativa del episodio y la lista de planos clave. Llego con un guión vivo, no con una cámara apuntando al azar.",
+            "Antes de pisar la provincia trabajo el mapa de locaciones, abro contactos iniciales con anfitriones y guías de la zona, defino la estructura narrativa del episodio y armo la lista de planos clave. Llego con un guión vivo, no con una cámara apuntando al azar.",
         },
         {
           number: "02",
@@ -149,7 +149,7 @@ export const content = {
           number: "03",
           title: "Edición en ruta",
           body:
-            "Misma noche, en la cabaña o el hostel, ingest del material en SSD externo, primera selección y corte de las versiones cortas. La pieza vertical sale en cuarenta y ocho horas y las versiones largas en una semana. Toda la edición parte de los perfiles D-Log M y D-Log de DJI para mantener color consistente entre las tres cámaras y a lo largo de los doce meses del proyecto.",
+            "Misma noche, en la cabaña o el hostel, ingest del material en SSD externo, primera selección y corte de las versiones cortas. Las piezas verticales son las que arrancan el ciclo de publicación, las versiones largas siguen unos días después. Toda la edición parte de los perfiles D-Log M y D-Log de DJI para mantener color consistente entre las tres cámaras y a lo largo de los doce meses del proyecto.",
         },
         {
           number: "04",
@@ -272,7 +272,7 @@ export const content = {
       eyebrow: "La colaboración que propongo",
       headline: "Un vínculo largo,\nno una campaña.",
       lead:
-        "Lo que pongo sobre la mesa es la base para una relación que escala. Argentina es el primer capítulo y el experimento controlado. Si el primer ciclo funciona, la estructura se replica en Chile, Brasil, Colombia y México sin negociar de cero.",
+        "Lo que pongo sobre la mesa es la base para algo que puede crecer en el tiempo. Argentina es el primer capítulo y se sostiene por sí solo. Lo que venga después es una conversación que tiene sentido recién cuando este ciclo esté en pie.",
       pillars: [
         {
           title: "Colaborador estable de LATAM",
@@ -285,9 +285,9 @@ export const content = {
             "Si el vínculo funciona, hay una conversación natural sobre representar a DJI como embajador regional. Presentaciones de producto, eventos creativos, charlas técnicas, campañas globales que necesiten una mirada latinoamericana auténtica.",
         },
         {
-          title: "Presencia activa en eventos",
+          title: "Presencia abierta para eventos",
           body:
-            "Disponibilidad confirmada para participar de los próximos eventos DJI en Argentina y la región. Activaciones, demos, presentaciones, lanzamientos. Donde la marca necesite presencia creativa con voz local, llego con cámara y guión.",
+            "Disponibilidad abierta para sumarse a eventos DJI en Argentina y la región cuando tenga sentido. Activaciones, demos, presentaciones, lanzamientos. Donde la marca quiera presencia creativa con voz local, llego con cámara y guión.",
         },
         {
           title: "Amplificación global",
@@ -314,9 +314,9 @@ export const content = {
 
     cta: {
       eyebrow: "Próximo paso",
-      headline: "Hablemos antes\nde fin de mes.",
+      headline: "Hablemos cuando\ntenga sentido para vos.",
       sub:
-        "Pre-producción puede arrancar dentro de las dos semanas siguientes a la primera reunión, y la primera pieza estaría publicada dentro de las cuatro semanas siguientes a la firma. Si la propuesta te suena, una llamada corta alcanza para empezar.",
+        "Pre-producción se puede arrancar al poco tiempo de la primera reunión, y la primera pieza puede estar publicada poco después de cerrar la colaboración. Si la propuesta te suena, una llamada corta alcanza para empezar a conversar los detalles.",
       primary: { label: "Escribir un mail", href: contact.mailtoEs },
       ghost: {
         label: "Instagram @luissambrano_ux",
@@ -440,14 +440,14 @@ export const content = {
       eyebrow: "The proposal in one line",
       headline: "Twelve months traveling\nArgentina with your ecosystem\nin hand.",
       lead:
-        "One single long form collaboration, not a short campaign. One piece per week for twelve months, fifty two in total, split across vertical and horizontal feeds. One mini documentary at the close of each province, twelve in total. And three long documentaries by year end. Everything captured with DJI Mini 5 Pro, Osmo Pocket 4 and Osmo 360, edited on the road and published under one creative voice. If it works in Argentina, the structure is designed to replicate across other countries in the region.",
+        "One single long form collaboration, not a short campaign. One piece per week for twelve months, fifty two in total, split across vertical and horizontal feeds. One mini documentary at the close of each province, twelve in total. And three long documentaries by year end. Everything captured with DJI Mini 5 Pro, Osmo Pocket 4 and Osmo 360, edited on the road and published under one creative voice.",
     },
 
     whyCreator: {
       eyebrow: "Why this creator",
       headline: "I don't have a million\nfollowers, not yet.\nThat is the opportunity.",
       lead:
-        "An established creator brings their audience already built, their aesthetic already set and a full calendar. An emerging creator like me brings the opposite, and that is exactly what this collaboration needs: dedicated time, willingness to shape the voice alongside the brand, exclusivity commitment and real hunger to produce. You will not be competing with other brands for my attention.",
+        "An established creator brings their audience already built, their aesthetic already set and a full calendar. An emerging creator like me brings the opposite, and that is exactly what this collaboration needs: dedicated time, willingness to shape the voice alongside the brand, and real hunger to produce.",
       points: [
         {
           title: "Hunger and availability",
@@ -507,7 +507,7 @@ export const content = {
           number: "01",
           title: "Remote pre production",
           body:
-            "Before setting foot in a province I already have the location map, the local contacts (hosts, guides, refuges), the narrative structure of the episode and the key shot list. I arrive with a living script, not a camera pointing at random.",
+            "Before setting foot in a province I work the location map, open initial contacts with local hosts and guides, define the narrative structure of the episode and build the key shot list. I arrive with a living script, not a camera pointing at random.",
         },
         {
           number: "02",
@@ -519,7 +519,7 @@ export const content = {
           number: "03",
           title: "On the road editing",
           body:
-            "Same night, in the cabin or the hostel, ingest into external SSD, first selection and short version cut. The vertical piece is out in forty eight hours and the long form versions within a week. Every edit starts from DJI's D-Log M and D-Log color profiles to keep color consistent across the three cameras and across the twelve months of the project.",
+            "Same night, in the cabin or the hostel, ingest into external SSD, first selection and short version cut. The vertical pieces start the publishing cycle, the long versions follow a few days later. Every edit starts from DJI's D-Log M and D-Log color profiles to keep color consistent across the three cameras and across the twelve months of the project.",
         },
         {
           number: "04",
@@ -640,7 +640,7 @@ export const content = {
       eyebrow: "The collaboration I am proposing",
       headline: "A long bond,\nnot a campaign.",
       lead:
-        "What I am putting on the table is the foundation of a scalable relationship. Argentina is the first chapter and the controlled experiment. If the first cycle works, the structure replicates in Chile, Brazil, Colombia and Mexico without negotiating from zero.",
+        "What I am putting on the table is the foundation for something that can grow over time. Argentina is the first chapter and stands on its own. What comes after is a conversation that only makes sense once this cycle is up and running.",
       pillars: [
         {
           title: "LATAM long term collaborator",
@@ -653,9 +653,9 @@ export const content = {
             "If the bond works, the conversation about representing DJI as a regional ambassador is natural. Product presentations, creative events, technical talks, global campaigns that need an authentic Latin American eye.",
         },
         {
-          title: "Active event presence",
+          title: "Open availability for events",
           body:
-            "Confirmed availability for upcoming DJI events across Argentina and the region. Activations, demos, presentations, launches. Wherever the brand needs creative presence with local voice, I show up with gear and script.",
+            "Open availability to join DJI events across Argentina and the region whenever it makes sense. Activations, demos, presentations, launches. Wherever the brand wants creative presence with a local voice, I show up with gear and script.",
         },
         {
           title: "Global amplification",
@@ -682,9 +682,9 @@ export const content = {
 
     cta: {
       eyebrow: "Next step",
-      headline: "Let's talk\nbefore the month ends.",
+      headline: "Let's talk when\nit makes sense for you.",
       sub:
-        "Pre production can start within two weeks of the first meeting, and the first piece would be live within four weeks of signing. If the proposal makes sense, a short call is enough to begin.",
+        "Pre production can start shortly after the first meeting, and the first piece can go live shortly after closing the collaboration. If the proposal makes sense, a short call is enough to start the conversation about the details.",
       primary: { label: "Send an email", href: contact.mailtoEn },
       ghost: {
         label: "Instagram @luissambrano_ux",
