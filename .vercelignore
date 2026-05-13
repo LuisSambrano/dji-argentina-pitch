@@ -1,0 +1,14 @@
+# HyperFrames composition source projects.
+# Las MP4 rendereadas ya viven en public/videos/ y se sirven desde ahi.
+# El source HTML y los node_modules de hyperframes no son necesarios en runtime.
+videos-src/
+
+# Local screenshots de Playwright/webapp-testing
+.tmp-screenshots/
+
+# OS
+.DS_Store
+
+# Logs y temporales
+*.log
+.tmp/
