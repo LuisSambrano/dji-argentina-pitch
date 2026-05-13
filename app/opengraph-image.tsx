@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 export const alt =
-  "Argentina entera, contada como un solo viaje. Propuesta de colaboración DJI 2026.";
+  "Luis Sambrano · Propuesta de colaboración con DJI Argentina, doce meses recorriendo el país.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

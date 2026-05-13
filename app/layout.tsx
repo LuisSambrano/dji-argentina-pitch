@@ -11,42 +11,42 @@ const inter = Inter({
 });
 
 const siteUrl = "https://dji-argentina-pitch.vercel.app";
-const title = "Argentina entera, contada como un solo viaje · Propuesta DJI";
+
+const title = "Luis Sambrano · Propuesta DJI Argentina";
 const description =
-  "Propuesta de colaboración de largo aliento con DJI para documentar Argentina entera durante 2026. Tutoriales accesibles, cinematografía aérea, documental y storytelling con DJI Mini 5 Pro, Osmo Pocket 4 y Osmo 360.";
-const titleEn = "All of Argentina, told as a single journey · DJI Proposal";
+  "Propuesta de colaboración de doce meses para documentar Argentina entera con DJI Mini 5 Pro, Osmo Pocket 4 y Osmo 360. Por Luis Sambrano.";
+
+const titleEn = "Luis Sambrano · DJI Argentina Proposal";
 const descriptionEn =
-  "A long form collaboration proposal with DJI to document all of Argentina during 2026. Accessible tutorials, cinematic aerials, documentary storytelling with DJI Mini 5 Pro, Osmo Pocket 4 and Osmo 360.";
+  "Twelve month collaboration proposal to document all of Argentina with DJI Mini 5 Pro, Osmo Pocket 4 and Osmo 360. By Luis Sambrano.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title,
   description,
-  applicationName: "DJI Argentina Pitch",
-  authors: [{ name: "Luis Sambrano" }],
+  applicationName: "Luis Sambrano · Propuesta DJI",
+  authors: [{ name: "Luis Sambrano", url: "https://instagram.com/luissambrano_ux" }],
   creator: "Luis Sambrano",
+  publisher: "Luis Sambrano",
   keywords: [
-    "DJI",
-    "Argentina",
-    "LATAM",
-    "creador de contenido",
-    "content creator",
+    "Luis Sambrano",
+    "DJI Argentina",
+    "Propuesta DJI",
+    "DJI LATAM",
     "DJI Mini 5 Pro",
     "Osmo Pocket 4",
     "Osmo 360",
-    "travel storytelling",
+    "creador de contenido Argentina",
+    "content creator Argentina",
+    "documental Argentina",
     "cinematografía aérea",
-    "documental",
-    "nómada digital",
-    "digital nomad",
-    "Luis Sambrano",
   ],
   openGraph: {
     type: "website",
     locale: "es_AR",
     alternateLocale: ["en_US"],
     url: siteUrl,
-    siteName: "DJI Argentina Pitch",
+    siteName: "Luis Sambrano · Propuesta DJI",
     title,
     description,
   },
@@ -54,6 +54,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
+    creator: "@luissambrano_ux",
   },
   robots: { index: true, follow: true },
   alternates: {
