@@ -1,14 +1,16 @@
 "use client";
 
-import Image from "next/image";
 import { Tile } from "@/components/ui/tile";
 import { Reveal } from "@/components/ui/reveal";
+import { InstagramFrame } from "@/components/ui/instagram-frame";
+import { YouTubeFrame } from "@/components/ui/youtube-frame";
 import { content } from "@/lib/content";
 import { useLocale } from "@/lib/locale";
 
 export function Formats() {
   const { locale } = useLocale();
   const t = content[locale].formats;
+  const { instagram, youtube } = t.mock;
 
   return (
     <Tile variant="canvas" id="formatos">
@@ -33,53 +35,46 @@ export function Formats() {
         </Reveal>
       </div>
 
-      <ul className="mt-16 grid gap-6 sm:grid-cols-2">
+      <div className="mt-20 grid gap-x-10 gap-y-20 md:grid-cols-2 md:gap-y-24">
         {t.quadrants.map((q, i) => (
-          <Reveal key={q.title} delay={120 + i * 100} as="li">
-            <article className="flex h-full flex-col overflow-hidden rounded-lg border border-hairline bg-parchment">
-              <div className="relative aspect-[4/5] w-full overflow-hidden bg-tile-3">
-                <Image
-                  src={q.poster}
-                  alt={q.title}
-                  fill
-                  sizes="(min-width: 1024px) 40vw, (min-width: 640px) 50vw, 90vw"
-                  className="object-cover"
-                />
-                <video
-                  className="absolute inset-0 h-full w-full object-cover"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="metadata"
-                  aria-hidden
-                >
-                  <source src={q.video} type="video/mp4" />
-                </video>
-                <div
-                  aria-hidden
-                  className="absolute inset-x-0 bottom-0 h-1/3"
-                  style={{
-                    background:
-                      "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%)",
-                  }}
-                />
-                <div className="absolute inset-x-0 bottom-0 p-5 text-white">
-                  <p className="text-[12px] uppercase tracking-[0.16em] text-white/80">
-                    {q.tag}
-                  </p>
-                  <h3 className="mt-1 text-[24px] font-semibold tracking-[-0.01em] md:text-[28px]">
-                    {q.title}
-                  </h3>
-                </div>
+          <Reveal key={q.title} delay={120 + i * 100}>
+            <div className="flex flex-col items-center">
+              <div className="w-full">
+                {q.device === "instagram-reel" ? (
+                  <InstagramFrame
+                    videoSrc={q.video}
+                    posterSrc={q.poster}
+                    handle={instagram.handle}
+                    location={instagram.location}
+                    caption={instagram.caption}
+                    followLabel={instagram.followLabel}
+                  />
+                ) : (
+                  <YouTubeFrame
+                    videoSrc={q.video}
+                    posterSrc={q.poster}
+                    channel={youtube.channel}
+                    views={youtube.views}
+                    time={youtube.time}
+                    title={youtube.title}
+                  />
+                )}
               </div>
-              <p className="p-6 text-[17px] leading-[1.47] text-ink-80 md:p-7">
-                {q.body}
-              </p>
-            </article>
+              <div className="mt-10 w-full max-w-[480px] text-center">
+                <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-primary">
+                  {q.tag}
+                </p>
+                <h3 className="mt-3 text-[24px] font-semibold tracking-[-0.01em] text-ink md:text-[28px]">
+                  {q.title}
+                </h3>
+                <p className="mt-3 text-[17px] leading-[1.5] text-ink-80">
+                  {q.body}
+                </p>
+              </div>
+            </div>
           </Reveal>
         ))}
-      </ul>
+      </div>
     </Tile>
   );
 }

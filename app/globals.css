@@ -113,7 +113,7 @@
 /* Reset / base */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 96px; /* compensa la altura global-nav (44) + sub-nav (52) */
+  scroll-padding-top: 64px; /* compensa solo global-nav (48) con un poco de margen */
   -webkit-text-size-adjust: 100%;
 }
 

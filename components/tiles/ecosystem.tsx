@@ -11,7 +11,7 @@ export function Ecosystem() {
   const t = content[locale].ecosystem;
 
   return (
-    <Tile variant="canvas" id="ecosistema">
+    <Tile variant="canvas" id="equipo">
       <div className="mx-auto max-w-3xl text-center">
         <Reveal>
           <p className="mb-5 text-[14px] uppercase tracking-[0.16em] text-ink-48">
