@@ -1,15 +1,21 @@
+"use client";
+
 import Image from "next/image";
 import { Tile } from "@/components/ui/tile";
 import { Reveal } from "@/components/ui/reveal";
-import { route } from "@/lib/content";
+import { content } from "@/lib/content";
+import { useLocale } from "@/lib/locale";
 
 export function Route() {
+  const { locale } = useLocale();
+  const t = content[locale].route;
+
   return (
     <Tile variant="tile-2" id="recorrido">
       <div className="mx-auto max-w-3xl text-center">
         <Reveal>
           <p className="mb-5 text-[14px] uppercase tracking-[0.16em] text-white/60">
-            {route.eyebrow}
+            {t.eyebrow}
           </p>
         </Reveal>
         <Reveal delay={100}>
@@ -17,18 +23,18 @@ export function Route() {
             className="whitespace-pre-line font-semibold text-[40px] leading-[1.05] tracking-[-0.02em] md:text-[56px]"
             style={{ letterSpacing: "-0.02em" }}
           >
-            {route.headline}
+            {t.headline}
           </h2>
         </Reveal>
         <Reveal delay={200}>
           <p className="mt-6 text-[18px] leading-[1.5] text-white/80 md:text-[21px]">
-            {route.lead}
+            {t.lead}
           </p>
         </Reveal>
       </div>
 
       <ul className="mt-16 grid gap-6 sm:grid-cols-2">
-        {route.pillars.map((pillar, i) => (
+        {t.pillars.map((pillar, i) => (
           <Reveal key={pillar.title} delay={150 + i * 100} as="li">
             <article className="group relative aspect-[4/5] overflow-hidden rounded-lg bg-tile-3 sm:aspect-[3/4] lg:aspect-[4/5]">
               <Image

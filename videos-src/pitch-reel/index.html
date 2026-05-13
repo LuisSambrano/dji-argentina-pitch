@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #03070d;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", system-ui, sans-serif;
+        color: #ffffff;
+        letter-spacing: -0.02em;
+      }
+
+      .layer { position: absolute; inset: 0; will-change: transform, opacity, filter; }
+
+      /* Fondo cinematografico — degradado vertical */
+      .bg {
+        background: linear-gradient(
+          180deg,
+          #03070d 0%,
+          #060c18 30%,
+          #0a1422 60%,
+          #1a1a2e 100%
+        );
+      }
+
+      /* Glow azul DJI desplazandose */
+      .accent-glow {
+        background: radial-gradient(
+          circle at 50% 30%,
+          rgba(41, 151, 255, 0.20) 0%,
+          rgba(41, 151, 255, 0.08) 25%,
+          transparent 50%
+        );
+        mix-blend-mode: screen;
+      }
+
+      /* Grain cinematografico */
+      .grain {
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+        opacity: 0.4;
+        mix-blend-mode: overlay;
+      }
+
+      .vignette {
+        background: radial-gradient(
+          ellipse at center,
+          transparent 45%,
+          rgba(0,0,0,0.55) 100%
+        );
+      }
+
+      .eyebrow {
+        position: absolute;
+        left: 80px;
+        right: 80px;
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.65);
+        text-align: center;
+        opacity: 0;
+      }
+
+      .big {
+        position: absolute;
+        left: 80px;
+        right: 80px;
+        text-align: center;
+        font-weight: 600;
+        letter-spacing: -0.025em;
+        line-height: 1.02;
+        color: #ffffff;
+        opacity: 0;
+      }
+
+      .stat-num {
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 380px;
+        font-weight: 600;
+        letter-spacing: -0.04em;
+        line-height: 1;
+        color: #2997ff;
+        opacity: 0;
+        font-variant-numeric: tabular-nums;
+      }
+      .stat-label {
+        position: absolute;
+        left: 80px;
+        right: 80px;
+        text-align: center;
+        font-size: 44px;
+        font-weight: 400;
+        line-height: 1.2;
+        color: rgba(255,255,255,0.85);
+        opacity: 0;
+      }
+      .stat-eyebrow {
+        position: absolute;
+        left: 80px;
+        right: 80px;
+        text-align: center;
+        font-size: 26px;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #2997ff;
+        opacity: 0;
+      }
+
+      .bullet-line {
+        position: absolute;
+        left: 50%;
+        width: 80px;
+        height: 2px;
+        background: rgba(41, 151, 255, 0.8);
+        transform: translateX(-50%);
+        opacity: 0;
+      }
+
+      /* Scene 1 — apertura */
+      #scene1-eyebrow { top: 760px; }
+      #scene1-name {
+        top: 850px;
+        font-size: 80px;
+        line-height: 1.05;
+      }
+      #scene1-tag {
+        top: 990px;
+        font-size: 32px;
+        font-weight: 400;
+        color: rgba(255,255,255,0.65);
+      }
+
+      /* Scene 2 — headline */
+      #scene2-eyebrow { top: 720px; }
+      #scene2-line1 {
+        top: 820px;
+        font-size: 130px;
+      }
+      #scene2-line2 {
+        top: 970px;
+        font-size: 130px;
+      }
+      #scene2-line3 {
+        top: 1120px;
+        font-size: 130px;
+        color: #2997ff;
+      }
+
+      /* Scenes 3-6 — stats */
+      .scene-stat .stat-eyebrow { top: 540px; }
+      .scene-stat .bullet-line { top: 620px; }
+      .scene-stat .stat-num { top: 720px; }
+      .scene-stat .stat-label { top: 1180px; }
+
+      /* Scene 7 — CTA */
+      #scene7-eyebrow { top: 760px; }
+      #scene7-headline {
+        top: 850px;
+        font-size: 100px;
+        line-height: 1.05;
+      }
+      #scene7-url {
+        top: 1090px;
+        font-size: 38px;
+        font-weight: 400;
+        color: rgba(41, 151, 255, 1);
+      }
+      #scene7-tag {
+        top: 1180px;
+        font-size: 28px;
+        font-weight: 400;
+        color: rgba(255,255,255,0.55);
+        letter-spacing: 0.04em;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="pitch-reel"
+      data-start="0"
+      data-duration="30"
+      data-width="1080"
+      data-height="1920"
+    >
+      <div id="bg" class="layer bg clip" data-start="0" data-duration="30" data-track-index="0"></div>
+      <div id="glow" class="layer accent-glow clip" data-start="0" data-duration="30" data-track-index="1"></div>
+      <div id="grain" class="layer grain clip" data-start="0" data-duration="30" data-track-index="98"></div>
+      <div id="vignette" class="layer vignette clip" data-start="0" data-duration="30" data-track-index="99"></div>
+
+      <div id="scene1-eyebrow" class="eyebrow clip" data-start="0" data-duration="3.5" data-track-index="10">Propuesta 2026</div>
+      <div id="scene1-name" class="big clip" data-start="0" data-duration="3.5" data-track-index="11">Luis Sambrano</div>
+      <div id="scene1-tag" class="big clip" data-start="0" data-duration="3.5" data-track-index="12">Para DJI Argentina</div>
+
+      <div id="scene2-eyebrow" class="eyebrow clip" data-start="3.5" data-duration="4.5" data-track-index="20">La narrativa</div>
+      <div id="scene2-line1" class="big clip" data-start="3.5" data-duration="4.5" data-track-index="21">Argentina</div>
+      <div id="scene2-line2" class="big clip" data-start="3.5" data-duration="4.5" data-track-index="22">entera,</div>
+      <div id="scene2-line3" class="big clip" data-start="3.5" data-duration="4.5" data-track-index="23">un solo viaje.</div>
+
+      <div class="scene-stat" data-scene="3">
+        <div id="scene3-eyebrow" class="stat-eyebrow clip" data-start="8" data-duration="5" data-track-index="30">El recorrido</div>
+        <div id="scene3-line" class="bullet-line clip" data-start="8" data-duration="5" data-track-index="31"></div>
+        <div id="scene3-num" class="stat-num clip" data-start="8" data-duration="5" data-track-index="32">0</div>
+        <div id="scene3-label" class="stat-label clip" data-start="8" data-duration="5" data-track-index="33">provincias documentadas a lo largo del proyecto</div>
+      </div>
+
+      <div class="scene-stat" data-scene="4">
+        <div id="scene4-eyebrow" class="stat-eyebrow clip" data-start="13" data-duration="5" data-track-index="40">El ritmo</div>
+        <div id="scene4-line" class="bullet-line clip" data-start="13" data-duration="5" data-track-index="41"></div>
+        <div id="scene4-num" class="stat-num clip" data-start="13" data-duration="5" data-track-index="42">0</div>
+        <div id="scene4-label" class="stat-label clip" data-start="13" data-duration="5" data-track-index="43">piezas semanales producidas en 12 meses</div>
+      </div>
+
+      <div class="scene-stat" data-scene="5">
+        <div id="scene5-eyebrow" class="stat-eyebrow clip" data-start="18" data-duration="5" data-track-index="50">La profundidad</div>
+        <div id="scene5-line" class="bullet-line clip" data-start="18" data-duration="5" data-track-index="51"></div>
+        <div id="scene5-num" class="stat-num clip" data-start="18" data-duration="5" data-track-index="52">0</div>
+        <div id="scene5-label" class="stat-label clip" data-start="18" data-duration="5" data-track-index="53">documentales largos al año</div>
+      </div>
+
+      <div class="scene-stat" data-scene="6">
+        <div id="scene6-eyebrow" class="stat-eyebrow clip" data-start="23" data-duration="4" data-track-index="60">La voz</div>
+        <div id="scene6-line" class="bullet-line clip" data-start="23" data-duration="4" data-track-index="61"></div>
+        <div id="scene6-num" class="stat-num clip" data-start="23" data-duration="4" data-track-index="62">0</div>
+        <div id="scene6-label" class="stat-label clip" data-start="23" data-duration="4" data-track-index="63">narrativa coherente sostenida durante todo el viaje</div>
+      </div>
+
+      <div id="scene7-eyebrow" class="eyebrow clip" data-start="27" data-duration="3" data-track-index="70">Construyamos esto</div>
+      <div id="scene7-headline" class="big clip" data-start="27" data-duration="3" data-track-index="71">Juntos.</div>
+      <div id="scene7-url" class="big clip" data-start="27" data-duration="3" data-track-index="72">dji-argentina-pitch.vercel.app</div>
+      <div id="scene7-tag" class="big clip" data-start="27" data-duration="3" data-track-index="73">Luis Sambrano · Argentina · 2026</div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      // Glow sutil pulsando durante todo el reel (deterministic, two halves)
+      tl.fromTo("#glow",
+        { opacity: 0.7, scale: 1 },
+        { opacity: 1, scale: 1.1, duration: 15, ease: "sine.inOut" },
+        0
+      );
+      tl.to("#glow",
+        { opacity: 0.7, scale: 1, duration: 15, ease: "sine.inOut" },
+        15
+      );
+
+      // Grain drift
+      tl.fromTo("#grain",
+        { backgroundPosition: "0 0" },
+        { backgroundPosition: "300px 200px", duration: 30, ease: "none" },
+        0
+      );
+
+      /* SCENE 1 — Apertura */
+      tl.fromTo("#scene1-eyebrow",
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" },
+        0.3
+      );
+      tl.fromTo("#scene1-name",
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, duration: 0.9, ease: "power3.out" },
+        0.6
+      );
+      tl.fromTo("#scene1-tag",
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" },
+        1.0
+      );
+      tl.to("#scene1-eyebrow, #scene1-name, #scene1-tag",
+        { opacity: 0, y: -20, duration: 0.6, ease: "power2.in" },
+        3.0
+      );
+      tl.set("#scene1-eyebrow, #scene1-name, #scene1-tag",
+        { opacity: 0 }, 3.5);
+
+      /* SCENE 2 — Headline */
+      tl.fromTo("#scene2-eyebrow",
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" },
+        3.7
+      );
+      tl.fromTo("#scene2-line1",
+        { opacity: 0, x: -60 },
+        { opacity: 1, x: 0, duration: 0.7, ease: "power3.out" },
+        3.9
+      );
+      tl.fromTo("#scene2-line2",
+        { opacity: 0, x: -60 },
+        { opacity: 1, x: 0, duration: 0.7, ease: "power3.out" },
+        4.2
+      );
+      tl.fromTo("#scene2-line3",
+        { opacity: 0, x: -60 },
+        { opacity: 1, x: 0, duration: 0.8, ease: "power3.out" },
+        4.6
+      );
+      tl.to("#scene2-eyebrow, #scene2-line1, #scene2-line2, #scene2-line3",
+        { opacity: 0, y: -20, duration: 0.6, ease: "power2.in" },
+        7.4
+      );
+      tl.set("#scene2-eyebrow, #scene2-line1, #scene2-line2, #scene2-line3",
+        { opacity: 0 }, 8.0);
+
+      /* Helper para escenas de stat */
+      function buildStat(sceneIdx, startTime, duration, targetValue, fadeOutAt, nextStart) {
+        tl.fromTo(`#scene${sceneIdx}-eyebrow`,
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" },
+          startTime + 0.2
+        );
+        tl.fromTo(`#scene${sceneIdx}-line`,
+          { opacity: 0, scaleX: 0 },
+          { opacity: 1, scaleX: 1, duration: 0.5, ease: "power2.out" },
+          startTime + 0.4
+        );
+        tl.fromTo(`#scene${sceneIdx}-num`,
+          { opacity: 0, scale: 0.92 },
+          { opacity: 1, scale: 1, duration: 0.7, ease: "power3.out" },
+          startTime + 0.5
+        );
+        const proxy = { v: 0 };
+        const numEl = document.getElementById(`scene${sceneIdx}-num`);
+        tl.to(proxy, {
+          v: targetValue,
+          duration: 1.4,
+          ease: "power2.out",
+          onUpdate: () => {
+            if (numEl) numEl.textContent = Math.round(proxy.v);
+          },
+        }, startTime + 0.6);
+        tl.fromTo(`#scene${sceneIdx}-label`,
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" },
+          startTime + 1.0
+        );
+        const groupSelector = `#scene${sceneIdx}-eyebrow, #scene${sceneIdx}-line, #scene${sceneIdx}-num, #scene${sceneIdx}-label`;
+        tl.to(groupSelector,
+          { opacity: 0, y: -20, duration: 0.5, ease: "power2.in" },
+          fadeOutAt
+        );
+        // Hard kill al inicio del proximo clip para que el seek no deje estado residual
+        tl.set(groupSelector, { opacity: 0 }, nextStart);
+      }
+
+      buildStat(3, 8, 5, 24, 12.6, 13.0);
+      buildStat(4, 13, 5, 52, 17.6, 18.0);
+      buildStat(5, 18, 5, 3, 22.6, 23.0);
+      buildStat(6, 23, 4, 1, 26.6, 27.0);
+
+      /* SCENE 7 — CTA */
+      tl.fromTo("#scene7-eyebrow",
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" },
+        27.2
+      );
+      tl.fromTo("#scene7-headline",
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" },
+        27.5
+      );
+      tl.fromTo("#scene7-url",
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" },
+        28.0
+      );
+      tl.fromTo("#scene7-tag",
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" },
+        28.3
+      );
+
+      window.__timelines["pitch-reel"] = tl;
+    </script>
+  </body>
+</html>

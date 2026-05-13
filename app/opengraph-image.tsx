@@ -1,7 +1,8 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Argentina, frame a frame — Propuesta de colaboración DJI";
+export const alt =
+  "Argentina entera, contada como un solo viaje. Propuesta de colaboración DJI 2026.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -23,26 +24,26 @@ export default function OG() {
       >
         <div
           style={{
-            fontSize: 24,
+            fontSize: 22,
             opacity: 0.7,
             textTransform: "uppercase",
             letterSpacing: 4,
           }}
         >
-          Propuesta de colaboración · DJI × Argentina
+          Propuesta de colaboración 2026 · DJI × Argentina
         </div>
         <div
           style={{
-            fontSize: 110,
+            fontSize: 96,
             fontWeight: 600,
-            lineHeight: 1.0,
+            lineHeight: 1.02,
             letterSpacing: -3,
             display: "flex",
             flexDirection: "column",
           }}
         >
-          <span>Argentina,</span>
-          <span>frame a frame.</span>
+          <span>Argentina entera,</span>
+          <span>un solo viaje.</span>
         </div>
         <div
           style={{

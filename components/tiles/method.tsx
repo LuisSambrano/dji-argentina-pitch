@@ -1,15 +1,21 @@
+"use client";
+
 import { Tile } from "@/components/ui/tile";
 import { Reveal } from "@/components/ui/reveal";
-import { method } from "@/lib/content";
+import { content } from "@/lib/content";
+import { useLocale } from "@/lib/locale";
 
 export function Method() {
+  const { locale } = useLocale();
+  const t = content[locale].method;
+
   return (
     <Tile variant="parchment" id="metodo">
       <div className="grid gap-14 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
         <div>
           <Reveal>
             <p className="mb-5 text-[14px] uppercase tracking-[0.16em] text-ink-48">
-              {method.eyebrow}
+              {t.eyebrow}
             </p>
           </Reveal>
           <Reveal delay={100}>
@@ -17,17 +23,17 @@ export function Method() {
               className="whitespace-pre-line font-semibold text-[40px] leading-[1.05] tracking-[-0.02em] text-ink md:text-[56px]"
               style={{ letterSpacing: "-0.02em" }}
             >
-              {method.headline}
+              {t.headline}
             </h2>
           </Reveal>
           <Reveal delay={200}>
-            <p className="mt-6 max-w-[44ch] text-[18px] leading-[1.5] text-ink-80 md:text-[21px]">
-              {method.lead}
+            <p className="mt-6 max-w-[48ch] text-[18px] leading-[1.5] text-ink-80 md:text-[21px]">
+              {t.lead}
             </p>
           </Reveal>
         </div>
         <ul className="grid gap-10 sm:grid-cols-3 lg:gap-6">
-          {method.columns.map((col, i) => (
+          {t.columns.map((col, i) => (
             <Reveal key={col.title} delay={150 + i * 120} as="li">
               <div className="border-t border-ink/15 pt-6">
                 <span className="text-[14px] font-semibold uppercase tracking-[0.16em] text-primary">

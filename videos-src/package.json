@@ -1,0 +1,23 @@
+{
+  "name": "videos-src",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HyperFrames compositions for the DJI pitch landing. Renders MP4s into ../public/videos/.",
+  "scripts": {
+    "render:hero": "cd hero-loop && npx hyperframes render --resolution landscape --output ../../public/videos/hero-loop.mp4",
+    "render:reel": "cd pitch-reel && npx hyperframes render --resolution portrait --output ../../public/videos/dji-pitch-reel.mp4",
+    "render:all": "npm run render:hero && npm run render:reel",
+    "preview:hero": "cd hero-loop && npm run dev",
+    "preview:reel": "cd pitch-reel && npm run dev",
+    "check:hero": "cd hero-loop && npm run check",
+    "check:reel": "cd pitch-reel && npm run check",
+    "doctor": "npx hyperframes doctor"
+  },
+  "keywords": [],
+  "author": "Luis Sambrano",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "hyperframes": "^0.6.0"
+  }
+}

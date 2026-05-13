@@ -1,6 +1,13 @@
+"use client";
+
 import { ButtonPrimary } from "@/components/ui/button-primary";
+import { content } from "@/lib/content";
+import { useLocale } from "@/lib/locale";
 
 export function SubNav() {
+  const { locale } = useLocale();
+  const t = content[locale].nav;
+
   return (
     <div
       className="sticky top-11 z-40 w-full border-b border-black/[0.04] bg-parchment/80"
@@ -14,13 +21,13 @@ export function SubNav() {
           className="text-[21px] font-semibold tracking-[0.231px] text-ink"
           style={{ letterSpacing: "0.231px" }}
         >
-          Propuesta DJI
+          {t.sectionTitle}
         </span>
         <div className="flex items-center gap-3">
           <span className="hidden text-[14px] tracking-[-0.224px] text-ink-80 sm:inline">
-            Argentina · 2026
+            {t.sectionMeta}
           </span>
-          <ButtonPrimary href="#contacto">Iniciar colaboración</ButtonPrimary>
+          <ButtonPrimary href="#contacto">{t.sectionCta}</ButtonPrimary>
         </div>
       </div>
     </div>
