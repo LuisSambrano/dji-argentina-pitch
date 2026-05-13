@@ -3,14 +3,15 @@
 import { Tile } from "@/components/ui/tile";
 import { Reveal } from "@/components/ui/reveal";
 import { InstagramFrame } from "@/components/ui/instagram-frame";
-import { YouTubeFrame } from "@/components/ui/youtube-frame";
+import { YouTubeShortsFrame } from "@/components/ui/youtube-shorts-frame";
+import { MacBookFrame } from "@/components/ui/macbook-frame";
 import { content } from "@/lib/content";
 import { useLocale } from "@/lib/locale";
 
 export function Formats() {
   const { locale } = useLocale();
   const t = content[locale].formats;
-  const { instagram, youtube } = t.mock;
+  const { instagram, youtubeShorts, youtube } = t.mock;
 
   return (
     <Tile variant="canvas" id="formatos">
@@ -35,11 +36,24 @@ export function Formats() {
         </Reveal>
       </div>
 
-      <div className="mt-20 grid gap-x-10 gap-y-20 md:grid-cols-2 md:gap-y-24">
+      <div className="mt-20 flex flex-col gap-24">
         {t.quadrants.map((q, i) => (
-          <Reveal key={q.title} delay={120 + i * 100}>
-            <div className="flex flex-col items-center">
-              <div className="w-full">
+          <Reveal key={q.title} delay={120 + i * 60}>
+            <div
+              className={
+                q.device === "macbook"
+                  ? "grid items-center gap-12 lg:grid-cols-[1.4fr_1fr]"
+                  : "grid items-center gap-12 lg:grid-cols-[1fr_1.4fr]"
+              }
+            >
+              {/* Device frame */}
+              <div
+                className={
+                  q.device === "macbook"
+                    ? "order-1 w-full lg:order-1"
+                    : "order-1 w-full lg:order-1"
+                }
+              >
                 {q.device === "instagram-reel" ? (
                   <InstagramFrame
                     videoSrc={q.video}
@@ -49,25 +63,36 @@ export function Formats() {
                     caption={instagram.caption}
                     followLabel={instagram.followLabel}
                   />
+                ) : q.device === "youtube-shorts" ? (
+                  <YouTubeShortsFrame
+                    videoSrc={q.video}
+                    posterSrc={q.poster}
+                    channel={youtubeShorts.channel}
+                    subscribers={youtubeShorts.subscribers}
+                    title={youtubeShorts.title}
+                  />
                 ) : (
-                  <YouTubeFrame
+                  <MacBookFrame
                     videoSrc={q.video}
                     posterSrc={q.poster}
                     channel={youtube.channel}
                     views={youtube.views}
                     time={youtube.time}
                     title={youtube.title}
+                    shortTitle={youtube.shortTitle}
                   />
                 )}
               </div>
-              <div className="mt-10 w-full max-w-[480px] text-center">
+
+              {/* Text */}
+              <div className="order-2 max-w-[480px] lg:order-2">
                 <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-primary">
                   {q.tag}
                 </p>
-                <h3 className="mt-3 text-[24px] font-semibold tracking-[-0.01em] text-ink md:text-[28px]">
+                <h3 className="mt-3 text-[28px] font-semibold tracking-[-0.02em] text-ink md:text-[34px]">
                   {q.title}
                 </h3>
-                <p className="mt-3 text-[17px] leading-[1.5] text-ink-80">
+                <p className="mt-4 text-[17px] leading-[1.55] text-ink-80 md:text-[18px]">
                   {q.body}
                 </p>
               </div>

@@ -68,9 +68,9 @@ export const content = {
 
     proposal: {
       eyebrow: "La propuesta en una frase",
-      headline: "Doce meses recorriendo\nlas veinticuatro provincias\ncon tu ecosistema en mano.",
+      headline: "Doce meses recorriendo\nArgentina con tu ecosistema\nen mano.",
       lead:
-        "Una sola colaboración de largo aliento, no una campaña corta. Cincuenta y dos piezas semanales para feeds verticales y horizontales, doce mini documentales mensuales y tres documentales largos al cierre del año. Todo capturado con DJI Mini 5 Pro, Osmo Pocket 4 y Osmo 360, editado en ruta y publicado de manera coherente bajo una sola voz creativa. Una operación pensada para escalar a LATAM después del primer ciclo.",
+        "Una sola colaboración de largo aliento, no una campaña corta. Una pieza por semana durante doce meses, cincuenta y dos en total, repartidas entre feeds verticales y horizontales. Un mini documental mensual al cierre de cada provincia, doce en total. Y tres documentales largos al cierre del año. Todo capturado con DJI Mini 5 Pro, Osmo Pocket 4 y Osmo 360, editado en ruta y publicado bajo una sola voz creativa. Si funciona en Argentina, la estructura está pensada para replicarse en otros países de la región.",
     },
 
     whyCreator: {
@@ -112,21 +112,21 @@ export const content = {
           name: "DJI Mini 5 Pro",
           role: "El aéreo que viaja solo",
           body:
-            "Lo elegí porque pesa menos que cualquier otra opción con sensor de una pulgada, y eso me deja viajar sin permisos comerciales por la mayor parte de Argentina. En la práctica, cada provincia abre con un plano aéreo capturado por mí mismo, sin operador adicional ni equipo de soporte que infle el presupuesto de la colaboración.",
+            "Lo elegí porque es el único drone consumer con sensor de una pulgada que entra dentro de los 250 gramos, lo que simplifica registro y traslado en cabina entre provincias. El sistema O4 Plus me da transmisión estable a larga distancia incluso en zonas con interferencia, y los 4K a 120 fotogramas por segundo cubren tanto el plano cinemático lento como el slow motion sin cambiar de equipo. Cada provincia abre con un plano aéreo capturado solo, sin operador adicional ni equipo de soporte que infle el presupuesto.",
           image: "/images/dji-mini-5-pro.png",
         },
         {
           name: "Osmo Pocket 4",
           role: "El gimbal que reemplaza al equipo",
           body:
-            "Lo elegí porque elimina la figura del operador. Solo en ruta, en una cocina de hostel a las once de la noche, no puedo armar un set. El Pocket 4 me da cinematografía estabilizada en una mano y con LiDAR autofocus que mantiene al sujeto humano en foco sin asistente. Acá vive todo el material documental del proyecto.",
+            "Lo elegí porque elimina la figura del operador. Solo en ruta, en una cocina de hostel a las once de la noche, no puedo armar un set. El sensor de una pulgada con catorce stops de rango dinámico y diez bits D-Log me da material que aguanta corrección de color sin perder detalle, y el seguimiento ActiveTrack 7.0 mantiene al sujeto humano centrado mientras yo cocino, pregunto o filmo. Acá vive todo el material documental del proyecto.",
           image: "/images/dji-osmo-pocket-4.png",
         },
         {
           name: "Osmo 360",
-          role: "Una captura, cinco formatos",
+          role: "Una captura, varios formatos",
           body:
-            "Lo elegí porque es la pieza que multiplica el output sin multiplicar el tiempo de rodaje. Un solo registro en 360 alimenta el Reel vertical, el Short horizontal, el documental largo y el material panorámico para presentaciones de marca. Es la pieza que vuelve viable producir cincuenta y dos entregas semanales solo.",
+            "Lo elegí porque es la pieza que multiplica el material sin multiplicar el tiempo de rodaje. Un solo registro panorámico en 8K alimenta después el Reel vertical, el clip horizontal y el panorama para presentaciones de marca, todo reframeado en edición y no en cámara. La protección IP68 y RockSteady 3.0 me dan cobertura en lluvia, viento patagónico y trekkings largos sin pensar en el equipo.",
           image: "/images/dji-osmo-360.png",
         },
       ],
@@ -154,7 +154,7 @@ export const content = {
           number: "03",
           title: "Edición en ruta",
           body:
-            "Misma noche, en la cabaña o el hostel, ingest del material en SSD externo, primera selección, color preset cargado y corte de las versiones cortas. La pieza vertical sale en cuarenta y ocho horas, las versiones largas en una semana. Toda la edición usa DJI LUT y mi color science consistente durante el año.",
+            "Misma noche, en la cabaña o el hostel, ingest del material en SSD externo, primera selección y corte de las versiones cortas. La pieza vertical sale en cuarenta y ocho horas y las versiones largas en una semana. Toda la edición parte de los perfiles D-Log M y D-Log de DJI para mantener color consistente entre las tres cámaras y a lo largo de los doce meses del proyecto.",
         },
         {
           number: "04",
@@ -205,54 +205,63 @@ export const content = {
         "Cada locación produce cuatro piezas finales, una por plataforma, para que DJI esté presente donde su público objetivo realmente consume contenido. No mock ups en abstracto, simulaciones de cómo se verá cada formato en el feed real de tu audiencia.",
       quadrants: [
         {
-          title: "Vertical, Reel de feed",
-          tag: "Instagram · 15 a 60 segundos",
+          title: "Reel para Instagram",
+          tag: "Vertical · 15 a 60 segundos",
           body:
-            "Hook visual en el primer segundo, ritmo de feed, un producto y un concepto por pieza. Pensado para el scroll del consumidor que ya vio cien videos antes de llegar al tuyo y necesita un motivo para detenerse.",
+            "El formato del scroll. Un solo concepto por pieza, primer segundo decisivo, edición rápida. Acá vive el contenido que abre puertas hacia las versiones más largas.",
           video: "/videos/format-vertical-short.mp4",
           poster: "/images/route-ciudad.jpg",
           device: "instagram-reel" as const,
         },
         {
-          title: "Vertical, video largo",
-          tag: "TikTok largo y YouTube Shorts · 3 a 8 minutos",
+          title: "Short para YouTube",
+          tag: "Vertical · hasta 60 segundos",
           body:
-            "Tutorial paso a paso o mini documental en formato vertical, ya consolidado como puerta de entrada principal. Acá la propuesta profundiza sin que el espectador pierda el ritmo del scroll.",
+            "Mismo formato vertical, audiencia distinta. YouTube Shorts retiene mejor a quien busca aprender, así que estas piezas funcionan como puerta de entrada a las versiones largas del mismo episodio en el canal principal.",
           video: "/videos/format-vertical-long.mp4",
           poster: "/images/route-refugio.jpg",
-          device: "instagram-reel" as const,
+          device: "youtube-shorts" as const,
         },
         {
-          title: "Horizontal, clip cinemático",
+          title: "Clip cinemático horizontal",
           tag: "YouTube y campañas · 30 a 90 segundos",
           body:
-            "Ritmo cinemático lento, planos sostenidos, foco en atmósfera y estética. El formato bandera de las campañas de marca, el que abre presentaciones internas y cierra videos corporativos.",
+            "Ritmo lento, planos sostenidos, foco en atmósfera. El formato que abre presentaciones internas, pesa en propuestas comerciales y sostiene la estética de marca en cualquier pantalla grande.",
           video: "/videos/format-horizontal-short.mp4",
           poster: "/images/route-naturaleza.jpg",
-          device: "youtube" as const,
+          device: "macbook" as const,
         },
         {
-          title: "Horizontal, documental",
-          tag: "YouTube y eventos · 5 a 20 minutos",
+          title: "Documental horizontal",
+          tag: "YouTube principal · 8 a 15 minutos",
           body:
-            "Una provincia entera en formato episodio. Narrativa, personajes reales, ritmo documental. El formato que construye autoridad en YouTube y sirve para programación en eventos DJI o festivales aliados.",
+            "Una provincia en formato episodio. Narrativa, personajes reales, ritmo documental. El formato que construye autoridad sostenida en YouTube y que puede programarse en eventos o festivales aliados.",
           video: "/videos/format-horizontal-long.mp4",
           poster: "/images/route-ruta.jpg",
-          device: "youtube" as const,
+          device: "macbook" as const,
         },
       ],
       mock: {
         instagram: {
           handle: "luissambrano_ux",
-          location: "Argentina",
-          caption: "Patagonia, hora azul. Mini 5 Pro + Osmo Pocket 4.",
+          location: "Patagonia, Argentina",
+          caption:
+            "La hora azul de la Patagonia dura veinte minutos al día. Vale levantarse a las cinco para no perdérsela.",
           followLabel: "Seguir",
+        },
+        youtubeShorts: {
+          channel: "Luis Sambrano",
+          subscribers: "12,4 mil suscriptores",
+          title: "Manejé ochocientos kilómetros sin parar para ver salir el sol",
         },
         youtube: {
           channel: "Luis Sambrano",
-          views: "248K vistas",
+          views: "248 mil vistas",
           time: "hace 2 días",
-          title: "Una provincia, una sola toma. Filmado con DJI Osmo 360.",
+          title:
+            "El refugio del valle donde ya no entran autos | Cordillera, Argentina",
+          shortTitle:
+            "El refugio del valle donde ya no entran autos",
         },
       },
     },
@@ -296,7 +305,7 @@ export const content = {
       metrics: [
         { value: "24", label: "Provincias en doce meses" },
         { value: "12+", label: "Creadores locales sumados" },
-        { value: "52", label: "Piezas semanales entregadas" },
+        { value: "52", label: "Piezas en doce meses, una por semana" },
         { value: "3", label: "Documentales largos al cierre" },
       ],
     },
@@ -427,9 +436,9 @@ export const content = {
 
     proposal: {
       eyebrow: "The proposal in one line",
-      headline: "Twelve months traveling\nthe twenty four provinces\nwith your ecosystem in hand.",
+      headline: "Twelve months traveling\nArgentina with your ecosystem\nin hand.",
       lead:
-        "One single long form collaboration, not a short campaign. Fifty two weekly pieces for vertical and horizontal feeds, twelve monthly mini documentaries and three long form documentaries by year end. Everything captured with DJI Mini 5 Pro, Osmo Pocket 4 and Osmo 360, edited on the road and published consistently under one creative voice. An operation designed to scale across LATAM after the first cycle.",
+        "One single long form collaboration, not a short campaign. One piece per week for twelve months, fifty two in total, split across vertical and horizontal feeds. One mini documentary at the close of each province, twelve in total. And three long documentaries by year end. Everything captured with DJI Mini 5 Pro, Osmo Pocket 4 and Osmo 360, edited on the road and published under one creative voice. If it works in Argentina, the structure is designed to replicate across other countries in the region.",
     },
 
     whyCreator: {
@@ -471,21 +480,21 @@ export const content = {
           name: "DJI Mini 5 Pro",
           role: "The aerial that travels alone",
           body:
-            "I picked it because it weighs less than any other option with a one inch sensor, and that lets me travel without commercial permits across most of Argentina. In practice, every province opens with an aerial shot captured by me alone, no additional operator and no support gear inflating the collaboration's budget.",
+            "I picked it because it is the only consumer drone with a one inch sensor that comes in under 250 grams, which simplifies registration and cabin travel between provinces. The O4 Plus system gives me stable long range transmission even in interference-heavy areas, and 4K at 120 frames per second covers both the slow cinematic shot and slow motion without swapping gear. Every province opens with an aerial shot captured solo, no extra operator and no support crew inflating the collaboration's budget.",
           image: "/images/dji-mini-5-pro.png",
         },
         {
           name: "Osmo Pocket 4",
           role: "The gimbal that replaces the crew",
           body:
-            "I picked it because it removes the operator from the equation. Alone on the road, in a hostel kitchen at eleven at night, I can not set up a crew. The Pocket 4 gives me stabilized cinematography in one hand, with LiDAR autofocus that keeps the human subject sharp without an assistant. All the documentary material of the project lives here.",
+            "I picked it because it removes the operator from the equation. Alone on the road, in a hostel kitchen at eleven at night, I can not set up a crew. The one inch sensor with fourteen stops of dynamic range and 10-bit D-Log gives me footage that survives heavy color grading without losing detail, and ActiveTrack 7.0 keeps the human subject centered while I cook, ask questions or film. All the documentary material of the project lives here.",
           image: "/images/dji-osmo-pocket-4.png",
         },
         {
           name: "Osmo 360",
-          role: "One capture, five formats",
+          role: "One capture, multiple formats",
           body:
-            "I picked it because it is the piece that multiplies output without multiplying shooting time. One single 360 capture feeds the vertical Reel, the horizontal Short, the long documentary and the panoramic material for brand presentations. It is what makes producing fifty two weekly deliveries possible while traveling alone.",
+            "I picked it because it is the piece that multiplies material without multiplying shooting time. One single 8K panoramic capture later feeds the vertical Reel, the horizontal clip and the panoramic material for brand presentations, all reframed in editing rather than on camera. IP68 protection and RockSteady 3.0 give me coverage in rain, Patagonian wind and long hikes without worrying about the gear.",
           image: "/images/dji-osmo-360.png",
         },
       ],
@@ -513,7 +522,7 @@ export const content = {
           number: "03",
           title: "On the road editing",
           body:
-            "Same night, in the cabin or the hostel, ingest into external SSD, first selection, color preset loaded and short version cut. The vertical piece is out in forty eight hours, long form versions within a week. Every edit uses the DJI LUT and my consistent color science across the whole year.",
+            "Same night, in the cabin or the hostel, ingest into external SSD, first selection and short version cut. The vertical piece is out in forty eight hours and the long form versions within a week. Every edit starts from DJI's D-Log M and D-Log color profiles to keep color consistent across the three cameras and across the twelve months of the project.",
         },
         {
           number: "04",
@@ -564,54 +573,63 @@ export const content = {
         "Every location produces four final pieces, one per platform, so DJI shows up where its target audience actually consumes content. Not abstract mockups, simulations of how each format looks in the real feed of your audience.",
       quadrants: [
         {
-          title: "Vertical, feed Reel",
-          tag: "Instagram · 15 to 60 seconds",
+          title: "Instagram Reel",
+          tag: "Vertical · 15 to 60 seconds",
           body:
-            "Visual hook in the first second, feed pacing, one product and one concept per piece. Built for the scroll of a viewer who has already seen one hundred videos before reaching yours and needs a reason to pause.",
+            "The scroll format. One single concept per piece, decisive first second, tight cutting. This is where the content that opens the door to longer versions lives.",
           video: "/videos/format-vertical-short.mp4",
           poster: "/images/route-ciudad.jpg",
           device: "instagram-reel" as const,
         },
         {
-          title: "Vertical, long form",
-          tag: "Long TikTok and YouTube Shorts · 3 to 8 minutes",
+          title: "YouTube Short",
+          tag: "Vertical · up to 60 seconds",
           body:
-            "Step by step tutorial or mini documentary in vertical, already consolidated as the primary entry door. Here the proposal goes deeper without the viewer losing the scroll rhythm.",
+            "Same vertical format, different audience. YouTube Shorts holds learners better, so these pieces work as entry points to the long versions of the same episode on the main channel.",
           video: "/videos/format-vertical-long.mp4",
           poster: "/images/route-refugio.jpg",
-          device: "instagram-reel" as const,
+          device: "youtube-shorts" as const,
         },
         {
-          title: "Horizontal, cinematic clip",
+          title: "Horizontal cinematic clip",
           tag: "YouTube and campaigns · 30 to 90 seconds",
           body:
-            "Slow cinematic pacing, sustained shots, focus on atmosphere and aesthetics. The flagship campaign format, the one that opens internal presentations and closes corporate videos.",
+            "Slow pacing, sustained shots, focus on atmosphere. The format that opens internal presentations, weights commercial proposals and sustains the brand aesthetic on any larger screen.",
           video: "/videos/format-horizontal-short.mp4",
           poster: "/images/route-naturaleza.jpg",
-          device: "youtube" as const,
+          device: "macbook" as const,
         },
         {
-          title: "Horizontal, documentary",
-          tag: "YouTube and events · 5 to 20 minutes",
+          title: "Horizontal documentary",
+          tag: "Main YouTube · 8 to 15 minutes",
           body:
-            "An entire province in episode format. Narrative arc, real characters, documentary pacing. The format that builds YouTube authority and serves for programming at DJI events or partnered festivals.",
+            "A province in episode format. Narrative arc, real characters, documentary pacing. The format that builds sustained YouTube authority and can be programmed at events or partnered festivals.",
           video: "/videos/format-horizontal-long.mp4",
           poster: "/images/route-ruta.jpg",
-          device: "youtube" as const,
+          device: "macbook" as const,
         },
       ],
       mock: {
         instagram: {
           handle: "luissambrano_ux",
-          location: "Argentina",
-          caption: "Patagonia, blue hour. Mini 5 Pro + Osmo Pocket 4.",
+          location: "Patagonia, Argentina",
+          caption:
+            "Patagonia's blue hour lasts twenty minutes a day. Worth waking up at five not to miss it.",
           followLabel: "Follow",
+        },
+        youtubeShorts: {
+          channel: "Luis Sambrano",
+          subscribers: "12.4K subscribers",
+          title: "I drove eight hundred kilometers without stopping to catch this sunrise",
         },
         youtube: {
           channel: "Luis Sambrano",
           views: "248K views",
           time: "2 days ago",
-          title: "One province, one single take. Shot on DJI Osmo 360.",
+          title:
+            "The refuge in the valley cars no longer reach | Andes, Argentina",
+          shortTitle:
+            "The refuge in the valley cars no longer reach",
         },
       },
     },
@@ -655,7 +673,7 @@ export const content = {
       metrics: [
         { value: "24", label: "Provinces in twelve months" },
         { value: "12+", label: "Local creators onboarded" },
-        { value: "52", label: "Weekly pieces delivered" },
+        { value: "52", label: "Pieces in twelve months, one per week" },
         { value: "3", label: "Long documentaries by year end" },
       ],
     },
